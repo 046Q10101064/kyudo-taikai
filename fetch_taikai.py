@@ -1,4 +1,5 @@
 import os
+import time
 import json
 import datetime
 import requests
@@ -17,6 +18,13 @@ TARGET_URLS = [
     # ※都道府県連盟の「行事予定」「大会日程」ページのURLもここに追加できます
 ]
 
+# 試行するモデルの優先順位リスト（上が混雑していたら下のモデルに自動切り替え）
+MODELS_TO_TRY = [
+    "gemini-3.8-flash",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+]
+
 def fetch_page_text(url):
     """Webページからテキストとリンク情報を抽出する"""
     try:
@@ -26,11 +34,9 @@ def fetch_page_text(url):
         res.encoding = res.apparent_encoding
         soup = BeautifulSoup(res.text, "html.parser")
         
-        # 不要なスクリプトやスタイルを除去
         for tag in soup(["script", "style", "header", "footer", "nav"]):
             tag.decompose()
             
-        # リンク先（PDFや要項ページ）のURLもテキストに補記してAIが参照先を分かるようにする
         for a in soup.find_all("a", href=True):
             href = requests.compat.urljoin(url, a["href"])
             a.append(f" [URL: {href}] ")
@@ -43,11 +49,12 @@ def fetch_page_text(url):
         return ""
 
 def extract_events_with_gemini(client, page_text, source_url):
-    """Gemini APIを使ってテキストから大会情報を整理する"""
+    """Gemini APIを使ってテキストから大会情報を整理する（リトライ機能付き）"""
     prompt = f"""
 あなたは弓道大会の情報を整理するアシスタントです。
 以下のWebページテキストから、「弓道大会・競技会・審査」の情報を抽出し、JSON形式で出力してください。
 ※すでに終了したものも含め、スケジュール表に載っているものを抽出してください。
+※現在は令和8年度（2026年4月〜2027年3月）です。「令和9年1月〜3月」は「2027年1月〜3月」として西暦に変換してください。
 
 【出力ルール】
 - 必ず以下のキーを持つオブジェクトの配列（JSON）のみを出力してください。
@@ -55,7 +62,7 @@ def extract_events_with_gemini(client, page_text, source_url):
 - 参照先URL（url）は、その大会の個別ページや要項PDFのURLがあればそれを、無ければ元のページURL（{source_url}）を入れてください。
 
 【JSONの項目定義】
-- date: 開催日（YYYY-MM-DD形式。例: 2026-12-06。複数日の場合は初日。不明な場合は "2026-01-01"）
+- date: 開催日（YYYY-MM-DD形式。例: 2026-12-06。複数日の場合は初日）
 - date_display: 表示用の年月日（例: 2026年12月6日(日)）
 - name: 大会名
 - location: 大会場所（会場名や都道府県）
@@ -67,18 +74,27 @@ def extract_events_with_gemini(client, page_text, source_url):
 【抽出対象のテキスト】
 {page_text}
 """
-    try:
-        response = client.models.generate_content(
-            model="gemini-3.8-flash",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-            ),
-        )
-        return json.loads(response.text)
-    except Exception as e:
-        print(f"AI解析エラー ({source_url}): {e}")
-        return []
+    for model_name in MODELS_TO_TRY:
+        for attempt in range(3):  # 各モデル最大3回まで再試行
+            try:
+                print(f"AI解析中... モデル: {model_name} (試行 {attempt + 1}/3)")
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                    ),
+                )
+                return json.loads(response.text)
+            except Exception as e:
+                print(f"AI解析エラー ({model_name}): {e}")
+                if "503" in str(e) or "429" in str(e):
+                    print("サーバー混雑のため10秒待機して再試行します...")
+                    time.sleep(10)
+                else:
+                    # モデル名が存在しない等のエラーなら次のモデルへすぐ切り替える
+                    break
+    return []
 
 def main():
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -97,7 +113,6 @@ def main():
             if isinstance(events, list):
                 all_events.extend(events)
 
-    # 日本時間（JST）で現在時刻を取得
     jst = datetime.timezone(datetime.timedelta(hours=9))
     now_str = datetime.datetime.now(jst).strftime("%Y-%m-%d %H:%M")
 
