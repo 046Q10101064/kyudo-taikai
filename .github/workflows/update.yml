@@ -1,0 +1,38 @@
+name: Update Kyudo Taikai Data
+
+on:
+  schedule:
+    # 毎日 UTC 21:00（日本時間の朝 6:00）に自動実行
+    - cron: '0 21 * * *'
+  # GitHubの画面から手動でも「今すぐ実行」できるようにする設定
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリのコードを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonのセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 必要なライブラリのインストール
+        run: pip install -r requirements.txt
+
+      - name: 大会データの自動収集・AI解析を実行
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python fetch_taikai.py
+
+      - name: 更新された data.json を自動保存
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update taikai data" && git push)
