@@ -20,9 +20,8 @@ TARGET_URLS = [
 
 # 試行するモデルの優先順位リスト（上が混雑していたら下のモデルに自動切り替え）
 MODELS_TO_TRY = [
+    "gemini-3.5-flash-lite",
     "gemini-3.8-flash",
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
 ]
 
 def fetch_page_text(url):
