@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 06:48",
+  "updated_at": "2026-11-26 06:47",
   "events": [
     {
       "date": "2026-05-02",
@@ -100,6 +100,286 @@
       "deadline": "要項を確認",
       "apply_to": "要項を確認",
       "url": "https://www.kyudo.jp/taikai/detail/20261223_detail/"
+    },
+    {
+      "date": "2026-05-04",
+      "date_display": "2026年5月4日・5日",
+      "name": "【京都】定期中央審査会",
+      "location": "京都市勧業館「みやこめっせ」",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260504_detail/"
+    },
+    {
+      "date": "2026-05-06",
+      "date_display": "2026年5月6日",
+      "name": "【近畿地区】錬士臨時中央審査会",
+      "location": "京都市勧業館「みやこめっせ」",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260506_detail/"
+    },
+    {
+      "date": "2026-05-23",
+      "date_display": "2026年5月23日・24日",
+      "name": "【東京】特別学生臨時中央審査会〈５月〉",
+      "location": "全日本弓道連盟中央道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260523_detail/"
+    },
+    {
+      "date": "2026-05-30",
+      "date_display": "2026年5月30日・31日",
+      "name": "【北信越地区】臨時中央審査会",
+      "location": "石川県立武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260530_detail/"
+    },
+    {
+      "date": "2026-06-20",
+      "date_display": "2026年6月20日・21日",
+      "name": "【中国地区】錬士臨時中央審査会",
+      "location": "維新百年記念公園弓道場（山口県弓道場）",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260620_detail/"
+    },
+    {
+      "date": "2026-06-21",
+      "date_display": "2026年6月21日",
+      "name": "【北海道地区】錬士臨時中央審査会",
+      "location": "北ガスアリーナ札幌４６（札幌市中央体育館）弓道室（室内道場）",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260621_detail/"
+    },
+    {
+      "date": "2026-06-27",
+      "date_display": "2026年6月27日・28日",
+      "name": "【北信越地区】錬士臨時中央審査会",
+      "location": "県営富山弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260627_detail/"
+    },
+    {
+      "date": "2026-07-03",
+      "date_display": "2026年7月3日・4日",
+      "name": "【仙台】定期中央審査会",
+      "location": "宮城県弓道場／宮城県武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260703_detail/"
+    },
+    {
+      "date": "2026-07-05",
+      "date_display": "2026年7月5日",
+      "name": "【東北地区】錬士臨時中央審査会",
+      "location": "宮城県弓道場／宮城県武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260705_detail/"
+    },
+    {
+      "date": "2026-08-12",
+      "date_display": "2026年8月12日",
+      "name": "【福井】特別教員臨時中央審査会",
+      "location": "敦賀市総合運動公園弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260812_detail/"
+    },
+    {
+      "date": "2026-08-22",
+      "date_display": "2026年8月22日・23日",
+      "name": "【北海道地区】臨時中央審査会",
+      "location": "北ガスアリーナ札幌４６（札幌市中央体育館）弓道室（室内道場）",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260822_detail/"
+    },
+    {
+      "date": "2026-09-05",
+      "date_display": "2026年9月5日",
+      "name": "【九州地区】錬士臨時中央審査会",
+      "location": "福岡武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260905_detail/"
+    },
+    {
+      "date": "2026-09-06",
+      "date_display": "2026年9月6日・7日",
+      "name": "【福岡】定期中央審査会",
+      "location": "福岡武道館弓道場／福岡市総合体育館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260906_detail/"
+    },
+    {
+      "date": "2026-09-26",
+      "date_display": "2026年9月26日・27日",
+      "name": "【四国地区】錬士臨時中央審査会",
+      "location": "香川県立武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20260926_detail/"
+    },
+    {
+      "date": "2026-10-03",
+      "date_display": "2026年10月3日～5日",
+      "name": "【関東地区】臨時中央審査会",
+      "location": "シンコースポーツ神奈川県立武道館弓道場／大和スポーツセンター弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261003_detail/"
+    },
+    {
+      "date": "2026-10-17",
+      "date_display": "2026年10月17日・18日",
+      "name": "【東北地区】臨時中央審査会",
+      "location": "郡山市開成山弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261017_detail/"
+    },
+    {
+      "date": "2026-10-29",
+      "date_display": "2026年10月29日～31日",
+      "name": "【東京】定期中央審査会",
+      "location": "全日本弓道連盟中央道場／明治神宮武道場至誠館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261029_detail/"
+    },
+    {
+      "date": "2026-10-31",
+      "date_display": "2026年10月31日・11月1日",
+      "name": "【関東地区】錬士臨時中央審査会",
+      "location": "全日本弓道連盟中央道場／明治神宮武道場至誠館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261031_detail/"
+    },
+    {
+      "date": "2026-11-14",
+      "date_display": "2026年11月14日・15日",
+      "name": "【中国地区】臨時中央審査会",
+      "location": "広島県立総合体育館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261114_detail/"
+    },
+    {
+      "date": "2026-11-21",
+      "date_display": "2026年11月21日・22日",
+      "name": "【九州地区】臨時中央審査会",
+      "location": "東平尾公園博多の森弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261121_detail/"
+    },
+    {
+      "date": "2026-11-27",
+      "date_display": "2026年11月27日～29日",
+      "name": "【近畿地区】臨時中央審査会",
+      "location": "プロシードアリーナHIKONE　彦根市弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261127_detail/"
+    },
+    {
+      "date": "2026-11-28",
+      "date_display": "2026年11月28日・29日",
+      "name": "【東京】特別学生臨時中央審査会〈１１月〉",
+      "location": "全日本弓道連盟中央道場（明治神宮武道場至誠館第二弓道場）",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261128_detail/"
+    },
+    {
+      "date": "2026-12-19",
+      "date_display": "2026年12月19日・20日",
+      "name": "【東京】特別臨時中央審査会",
+      "location": "全日本弓道連盟中央道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20261219_detail/"
+    },
+    {
+      "date": "2027-01-29",
+      "date_display": "2027年1月29日～31日",
+      "name": "【東海地区】臨時中央審査会",
+      "location": "浜松市弓道場（可美公園内）",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20270129_detail/"
+    },
+    {
+      "date": "2027-02-20",
+      "date_display": "2027年2月20日",
+      "name": "【東海地区】錬士臨時中央審査会",
+      "location": "日本ガイシスポーツプラザ弓道場／愛知県武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20270220_detail/"
+    },
+    {
+      "date": "2027-02-21",
+      "date_display": "2027年2月21日～23日",
+      "name": "【名古屋】定期中央審査会",
+      "location": "日本ガイシスポーツプラザ弓道場／愛知県武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20270221_detail/"
+    },
+    {
+      "date": "2027-03-22",
+      "date_display": "2027年3月22日",
+      "name": "【都城】特別臨時中央審査会",
+      "location": "都城市早水公園体育文化センター",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20270322_detail/"
+    },
+    {
+      "date": "2027-03-26",
+      "date_display": "2027年3月26日～28日",
+      "name": "【四国地区】臨時中央審査会",
+      "location": "徳島県立中央武道館弓道場",
+      "qualification": "要項を確認",
+      "deadline": "要項を確認",
+      "apply_to": "要項を確認",
+      "url": "https://www.kyudo.jp/chuoshinsa/detail/20270326_detail/"
     }
   ]
 }
